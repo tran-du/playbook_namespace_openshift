@@ -1,5 +1,7 @@
 ---
-- hosts: ocp37hpd1
+---
+- name: Create RoleBinding deploy openshift
+  hosts: Openshift
   become: yes
   become_method: sudo
   roles:
