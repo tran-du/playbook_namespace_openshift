@@ -1,7 +1,7 @@
 ---
 - name: create role binding 
   oadm_policy_user:
-    namespace: deploy-{{ environnement }}
+    namespace: {{ ns }}-rec1
     user: system:serviceaccount
     resource_kind: rolebinding
     resource_name: "{{ rolebinding_name }}"
@@ -12,7 +12,7 @@
 
 - name: add role binding to role
   oadm_policy_user:
-    namespace: deploy-{{ environnement }}
+    namespace: {{ ns }}-rec1
     user: system:serviceaccount
     resource_kind: role
     resource_name: "{{ role_name }}"
