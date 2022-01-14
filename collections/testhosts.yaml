@@ -1,6 +1,0 @@
----
-- hosts: ocp37hpd1
-  become: yes
-  become_method: sudo
-  roles:
-    - role: managedrolebinding
