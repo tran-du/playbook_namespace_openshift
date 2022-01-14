@@ -1,0 +1,6 @@
+---
+# defaults file for managednamespace
+#
+environnement: rec1
+rolebinding_name: admin-Deploy
+role_name: admin
