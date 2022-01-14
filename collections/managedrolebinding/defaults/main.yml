@@ -1,0 +1,5 @@
+---
+# defaults file for managednamespace
+#
+first_character_enviroment: r
+environnement:  rec

@@ -1,0 +1,23 @@
+---
+# tasks file for initproject
+- name: Create Namespace
+  kubernetes.core.k8s:
+    state: present
+    definition:
+      kind: Namespace
+      apiVersion: v1
+      metadata:
+        annotations:
+          nekic.io/size: "{{ size }}"
+        name: "deploy_{{ environnement }}"
+
+- name: Create Resource Quota
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('template', '{{ size }}-resourcequota.yml.j2' ) }}"
+
+- name: Create Limit Range
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('template', '{{ size }}-limitrange.yml.j2' ) }}"
+

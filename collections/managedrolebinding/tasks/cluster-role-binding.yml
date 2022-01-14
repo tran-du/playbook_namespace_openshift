@@ -1,0 +1,21 @@
+---
+- name: create role binding 
+  oadm_policy_user:
+    namespace: deploy_{{ environnement }}
+    user: system:serviceaccount
+    resource_kind: rolebinding
+    resource_name: "{{ rolebinding_name }}"
+  register: policyout
+  run_once: true
+- debug: var=policyout
+
+
+- name: add role binding to role
+  oadm_policy_user:
+    namespace: deploy_{{ environnement }}
+    user: system:serviceaccount
+    resource_kind: role
+    resource_name: "{{ role_name }}"
+  register: policyout
+  run_once: true
+- debug: var=policyout

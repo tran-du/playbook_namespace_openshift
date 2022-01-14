@@ -1,0 +1,6 @@
+---
+# defaults file for managednamespace
+#
+size: small
+environnement: rec
+
