@@ -1,5 +1,6 @@
 ---
 # defaults file for managednamespace
 #
-first_character_enviroment: r
-environnement:  rec
+ns: beryl
+rolebinding_name: admin-Deploy
+role_name: admin
