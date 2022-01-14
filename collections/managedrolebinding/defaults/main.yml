@@ -1,6 +1,6 @@
 ---
 # defaults file for managednamespace
 #
-ns: beryl
+ns: testansible
 rolebinding_name: admin-Deploy
 role_name: admin
